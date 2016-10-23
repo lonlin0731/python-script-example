@@ -1,6 +1,21 @@
 #!/usr/bin/env python
 # -*-coding: utf-8 -*-
 
+'''
+    @FileName    : operateLocalFile.py
+    @Created    : 2016/10/21 21:37
+    @Author  : Lonlin0731
+    @Site    : https://github.com/lonlin0731
+    @Description : 爬取网站目录、提取url、爬取url页面，将页面制作成pdf。
+    @Background : 在python中文网站上（python.usyiyi.cn），有中文版库参考文档，但是没有提供下载，
+    只能在线查看，在手机上看就很不方便，所以想把该参考文档爬取下来制作成pdf，以便在手机上看。
+    @Usage :
+                1、找出目录所在的页面，爬取该页面
+                2、找出目录页面的特征，提取指定范围内的url链接
+                3、循环请求url链接，将返回结果进行处理并保存到本地
+                4、将本地保存的所有页面生成pdf文档
+'''
+
 import re
 import StringIO
 import pycurl
@@ -171,4 +186,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
